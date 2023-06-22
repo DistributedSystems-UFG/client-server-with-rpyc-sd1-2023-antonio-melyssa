@@ -36,7 +36,7 @@ class Client:
 
   def exec_command(command):
     if command == 'help':
-        command_help()
+        self.command_help()
     elif command == 'exit':
         command_exit()
     elif command == 'append':
@@ -49,7 +49,7 @@ class Client:
         command_order()
     else:
         print("Unknown command. Type 'help' for a list of available commands.")
-        
+
   while True:
       i = input("Type a command: ")
       print("Command typed: " + i)
