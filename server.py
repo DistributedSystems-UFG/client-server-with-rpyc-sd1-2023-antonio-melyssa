@@ -16,7 +16,7 @@ class DBList(rpyc.Service):
     return data in self.value
 
   def exposed_order(self):
-    valor = self.value.sort()
+    valor = sorted(self.value)
     print(valor)
     return valor
 
