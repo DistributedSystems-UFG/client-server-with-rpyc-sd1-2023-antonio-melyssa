@@ -4,14 +4,14 @@ conn = rpyc.connect(SERVER, PORT) # Connect to the server
 
 def command_help():
   print("Available commands:")
-  print("-help")
-  print("-append")
+  print("-help : print this help")
+  print("-append : append a value to the list")
   print("-value : return the list")
-  print("-search")
-  print("-order")
-  print("-biggest")
-  print("-mean")
-  print("-lowest")
+  print("-search : search a value in the list")
+  print("-order : order the list")
+  print("-biggest :  return the biggest value in the list")
+  print("-mean : return the mean of the list")
+  print("-lowest : return the lowest value in the list")
   print("-exit")
 
 def command_append():
