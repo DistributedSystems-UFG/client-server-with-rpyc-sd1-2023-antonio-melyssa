@@ -34,8 +34,8 @@ def command_biggest():
 def command_mean():
   print(conn.root.exposed_mean())
 
-def command_lowest():
-  print(conn.root.exposed_lowest())
+def command_smaller():
+  print(conn.root.exposed_smaller())
 
 def command_exit():
   print("Exiting...")

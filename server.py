@@ -25,7 +25,7 @@ class DBList(rpyc.Service):
   def exposed_mean(self):
     return sum(self.value)/len(self.value)
   
-  def exposed_lowest(self):
+  def exposed_smaller(self):
     return min(self.value)
 
 
