@@ -7,22 +7,6 @@ from constRPYC import * #-
 class Client:
   conn = rpyc.connect(SERVER, PORT) # Connect to the server
 
-  def exec_command(command):
-    if command == 'help':
-        command_help()
-    elif command == 'exit':
-        command_exit()
-    elif command == 'append':
-        command_append()
-    elif command == 'value':
-        command_value()
-    elif command == 'search': 
-        command_search()
-    elif command == 'order':
-        command_order()
-    else:
-        print("Unknown command. Type 'help' for a list of available commands.")
-
   def command_help():
       print("Available commands:")
       print("-help")
@@ -50,6 +34,22 @@ class Client:
       print("Exiting...")
       exit()
 
+  def exec_command(command):
+    if command == 'help':
+        command_help()
+    elif command == 'exit':
+        command_exit()
+    elif command == 'append':
+        command_append()
+    elif command == 'value':
+        command_value()
+    elif command == 'search': 
+        command_search()
+    elif command == 'order':
+        command_order()
+    else:
+        print("Unknown command. Type 'help' for a list of available commands.")
+        
   while True:
       i = input("Type a command: ")
       print("Command typed: " + i)
