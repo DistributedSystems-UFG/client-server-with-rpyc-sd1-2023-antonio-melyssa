@@ -19,6 +19,16 @@ class DBList(rpyc.Service):
     self.value.sort()
     return self.value
 
+  def exposed_biggest(self):
+    return max(self.value)
+  
+  def exposed_mean(self):
+    return sum(self.value)/len(self.value)
+  
+  def exposed_lowest(self):
+    return min(self.value)
+
+
 
 if __name__ == "__main__":
   server = ThreadedServer(DBList(), port = PORT)

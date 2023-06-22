@@ -9,6 +9,9 @@ def command_help():
   print("-value : return the list")
   print("-search")
   print("-order")
+  print("-biggest")
+  print("-mean")
+  print("-lowest")
   print("-exit")
 
 def command_append():
@@ -24,6 +27,15 @@ def command_search():
 
 def command_order():
   print(conn.root.exposed_order())
+
+def command_biggest():
+  print(conn.root.exposed_biggest())
+
+def command_mean():
+  print(conn.root.exposed_mean())
+
+def command_lowest():
+  print(conn.root.exposed_lowest())
 
 def command_exit():
   print("Exiting...")
