@@ -6,7 +6,7 @@ class DBList(rpyc.Service):
   value = []
 
   def exposed_append(self, data):
-    self.value = self.value + [data]
+    self.value = self.value + [int(data)]
     return self.value
 
   def exposed_value(self):
@@ -16,7 +16,7 @@ class DBList(rpyc.Service):
     return data in self.value
 
   def exposed_order(self):
-    self.value = self.value.sort()
+    self.value.sort()
     return self.value
 
 
