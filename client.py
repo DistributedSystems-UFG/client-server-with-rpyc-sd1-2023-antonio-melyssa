@@ -6,7 +6,7 @@ def command_help():
   print("Available commands:")
   print("-help")
   print("-append")
-  print("-value")
+  print("-value : return the list")
   print("-search")
   print("-order")
   print("-exit")

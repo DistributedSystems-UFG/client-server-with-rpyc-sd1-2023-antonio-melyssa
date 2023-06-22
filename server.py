@@ -16,7 +16,9 @@ class DBList(rpyc.Service):
     return data in self.value
 
   def exposed_order(self):
-    return sorted(self.value)
+    self.value.sort()
+    return self.value
+
 
 if __name__ == "__main__":
   server = ThreadedServer(DBList(), port = PORT)
