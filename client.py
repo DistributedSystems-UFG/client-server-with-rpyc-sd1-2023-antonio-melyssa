@@ -8,12 +8,20 @@ class Client:
   conn = rpyc.connect(SERVER, PORT) # Connect to the server
 
   def exec_command(command):
-    if command == '-help':
+    if command == 'help':
         command_help()
-    elif command == '-exit':
+    elif command == 'exit':
         command_exit()
+    elif command == 'append':
+        command_append()
+    elif command == 'value':
+        command_value()
+    elif command == 'search': 
+        command_search()
+    elif command == 'order':
+        command_order()
     else:
-        print("Comando desconhecido. Digite 'ajuda' para obter uma lista de comandos disponíveis.")
+        print("Unknown command. Type 'help' for a list of available commands.")
 
   def command_help():
       print("Available commands:")
@@ -43,5 +51,6 @@ class Client:
       exit()
 
   while True:
-      command = input("Type a command: ")
-      exec_command(command)
+      i = input("Type a command: ")
+      print("Command typed: " + i)
+      exec_command(i)
