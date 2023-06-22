@@ -1,6 +1,6 @@
 import rpyc
 from constRPYC import * #-
-
+conn = rpyc.connect(SERVER, PORT) # Connect to the server
 
 def command_help():
   print("Available commands:")
@@ -31,7 +31,7 @@ def command_exit():
 
 
 class Client:
-  conn = rpyc.connect(SERVER, PORT) # Connect to the server
+  
 
   def exec_command(command):
     if command == 'help':
